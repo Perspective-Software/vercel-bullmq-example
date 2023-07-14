@@ -3,14 +3,14 @@
   "cleanUrls": true,
   "scope": "vercel-bullmq-example",
   "functions": {
-    "src/index.ts": {
+    "api/index.ts": {
       "memory": 128,
       "maxDuration": 5
     }
   },
   "rewrites": [{
       "source": "(.*)",
-      "destination": "/src/index"
+      "destination": "/api/index"
     }
   ],
   "headers": [

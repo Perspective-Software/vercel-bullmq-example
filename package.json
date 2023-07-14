@@ -1,5 +1,5 @@
 {
-  "main": "/src/index.ts",
+  "main": "/api/index.ts",
   "scripts": {
     "start": "vercel dev --listen 3002"
   },
