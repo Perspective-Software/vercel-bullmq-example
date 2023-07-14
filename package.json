@@ -1,0 +1,13 @@
+{
+  "main": "/src/index.ts",
+  "scripts": {
+    "start": "vercel dev --listen 3002"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "@vercel/node": "^2.15.5",
+    "bullmq": "^4.3.0"
+  }
+}
