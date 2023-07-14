@@ -8,6 +8,10 @@
   },
   "dependencies": {
     "@vercel/node": "^2.15.5",
-    "bullmq": "^4.3.0"
+    "bullmq": "^4.3.0",
+    "bull": "^3.29.3"
+  },
+  "devDependencies": {
+    "@types/bull": "^3.13.0"
   }
 }

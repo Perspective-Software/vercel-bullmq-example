@@ -1,4 +1,5 @@
 import {VercelRequest, VercelResponse} from "@vercel/node";
+import Bull from 'bull';
 import {Queue} from "bullmq";
 import IORedis from 'ioredis';
 
@@ -11,6 +12,7 @@ export default async function handleRequest(req: VercelRequest, res: VercelRespo
 
     if (req.method === 'GET') {
         const REDIS_URL = process.env.REDIS_URL || '';
+        new Bull('vercel-bull', REDIS_URL);
         if(!REDIS_URL) {
             res.status(400).send({success: false, message: 'Redis Configuration missing'}).end();
             return;
